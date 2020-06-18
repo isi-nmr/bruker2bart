@@ -12,12 +12,12 @@ def print_help():
 
 def main():
 
-    options, args = getopt.getopt(sys.argv[1:], 'h:i:o:', ['help', 'in_path', 'out_path'])
+    options, args = getopt.getopt(sys.argv[1:], 'h:i:o:t:', ['help', 'in_path', 'out_path', 'traj_path'])
 
     if len(options) == 0:
         print_help()
 
-    in_path, out_path = None, None
+    in_path, out_path, traj_path = None, None, None
 
     for opt, value in options:
         if opt in ('-h', '--help'):
@@ -26,9 +26,11 @@ def main():
             in_path = value
         if opt in ('-o',):
             out_path = value
+        if opt in ('-t',):
+            traj_path = value
 
     if in_path and out_path:
-        conversion(in_path, out_path)
+        conversion(in_path, out_path, path_traj=traj_path)
     else:
         print_help()
 
