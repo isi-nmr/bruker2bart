@@ -30,7 +30,7 @@ def conversion_RADIAL(dataset, path_bart, path_traj=None):
 
     # to 1 / FOV
     for dim in range(traj_.shape[0]):
-        traj_[dim,...] *= 0.5 / (0.001 * dataset.ACQ_fov[dim])
+        traj_[dim,...] *= 1. / (0.001 * dataset.ACQ_fov[dim])
 
     traj = np.zeros(shape=(3,)+traj_.shape[1:], dtype=np.complex64)
     traj.real[0:traj_.shape[0],...] = traj_
@@ -40,7 +40,7 @@ def conversion(path_bruker, path_bart, path_traj=None):
     dataset = Dataset(path_bruker)
     scheme = dataset.scheme._meta['id']
 
-    if scheme in ['CART_2D', 'CART_3D']:
+    if scheme in ['CART_2D', 'CART_3D', 'FIELD_MAP']:
         conversion_CART(dataset, path_bart)
     elif scheme in ['RADIAL']:
         conversion_RADIAL(dataset, path_bart, path_traj)
