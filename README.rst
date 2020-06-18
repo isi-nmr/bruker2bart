@@ -1,6 +1,9 @@
 bruker2bart
 ===========
 
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.3900113.svg
+   :target: https://doi.org/10.5281/zenodo.3900113
+
 A Python package providing data format conversion between Bruker and `The Berkeley Advanced Reconstruction Toolbox <https://mrirecon.github.io/bart/>`_ (BART) data formats.
 It also provides several examples preforming reconstruction of Bruker data using BART.
 
