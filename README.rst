@@ -25,7 +25,7 @@ We provide a set of examples to demonstrate the functionality of bruker2bart. To
 
     pip install zenodo_get
     zenodo_get 10.5281/zenodo.3894651
-    unzip 20200612_094625_lego_phantom_3_1_2.zip.zip
+    unzip 20200612_094625_lego_phantom_3_1_2.zip
 
 Now it is necessary to set two environment variables.
 The `PATH_DATA` variable should be set to the parent directory of the downloaded data.
