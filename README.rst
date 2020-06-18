@@ -10,6 +10,15 @@ It also provides several examples preforming reconstruction of Bruker data using
 Install
 =======
 
+Using pip:
+
+
+.. code-block:: shell
+
+    pip install bruker2bart
+
+From source:
+
 .. code-block:: shell
 
     git clone https://github.com/isi-nmr/bruker2bart.git
