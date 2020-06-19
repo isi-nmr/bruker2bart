@@ -1,0 +1,4 @@
+# env setup
+python:
+  install:
+    - requirements: docs/requirements.txt
